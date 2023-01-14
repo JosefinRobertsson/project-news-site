@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Roboto Mono', monospace;
-  background: rgb(234, 234, 238);
+  background: rgb(189, 216, 193);
 }
 
 header {
@@ -30,12 +30,9 @@ header {
   text-align: center;
   color: black;
   max-width: 1380px;
-  max-height: ;
-  background: rgb(234, 234, 238);
 }
 
 .top-grid-item {
-  border: 0 solid salmon;
   padding: 20px;
 }
 
@@ -87,12 +84,23 @@ h3 {
   position: absolute;
   writing-mode: vertical-rl;
   color: white;
+  z-index: 2;
 }
 
 .desktop-only {
   display: block;
   max-width: 100%;
   border-radius: 6px;
+}
+
+.desktop-only-wrapper > h5 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  color:azure;
+  visibility: hidden;
+  z-index: 1;
+  transition: .2s;
 }
 
 .bottom-row {
@@ -104,21 +112,19 @@ h3 {
 .article-grid {
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid salmon;
-  width: 100%;
   max-width: 1380px;
   margin: auto;
   margin-bottom: 50px;
   padding: 20px 10px 60px;
   background: black;
   border-radius: 6px;
+  justify-content: space-evenly;
 }
 
 .flex-child {
-  flex: 25% 0 1;
-  height: 340px;
-  padding: 0px;
-  border: black solid 10px;
+  flex: 22%;
+  height: 300px;
+  margin: 10px;
   background: black;
   overflow: hidden;
   display: flex;
@@ -126,15 +132,12 @@ h3 {
   justify-content: center;
   position: relative;
   text-align: center;
-}
-
-.flex-child:hover {
-  border: 2px solid azure;
-  transition: .4s ease;
+  border-radius: 4px;
+  box-shadow: rgb(225, 225, 225) 0px 4px 8px -2px;
 }
 
 .img-height-size {
-  height: 340px;
+  height: 300px;
 }
 
 .img-width-size {
@@ -161,11 +164,6 @@ h4 {
   padding-bottom: 5px;
 }
 
-.footer {
-  width: 100%;
-  background: black;
-  border: 2px solid salmon;
-}
 
 .footer-wrapper {
   background: black;
@@ -197,22 +195,24 @@ form, .form-fields {
   background-color: black;
   color: azure;
 }
+.btn-home a:link, a:visited {
+  text-decoration: none;
+  color:azure;
+}
+
 
 
 @media screen and (max-width: 1024px)  {
   .top-grid {
-    border: 0px solid salmon;
     grid-template-columns: 50%;
     grid-template-areas: 
     "a a"
-    "b c"
-    /*"c c"*/
+    "b b"
+    "c c"
     "d d"
     "e e";
   }
-  .top-grid-item {
-    border: 0px solid salmon;
-  }
+  
   .navbar {
     grid-area: a;
     width: 100%;
@@ -238,23 +238,22 @@ form, .form-fields {
     grid-area: e;
    }
   .flex-child {
-    flex: 50% 0 1;
+    flex: 46%;
    }
    .preview-text {
-    top: 74%;
+    top: 72%;
    }
    .desktop-only {
     display: none;
    }
    .portable-only {
-    width: 100%;
+    width: 440px;
    }
   }
 
 
 @media screen and (max-width: 667px) {
   .top-grid {
-    border: 0px solid salmon;
     grid-template-columns: 50%;
     grid-template-areas: 
     "a a"
@@ -264,11 +263,10 @@ form, .form-fields {
     "e e";
   }
   .portable-only {
-    width: 440px;
+    max-width: 440px;
    }
   .flex-child {
-    flex: 100% 0 1;
-    align-items: center;
+    flex: 100%;
   }
   .navbar a {
     display: block;
@@ -276,8 +274,12 @@ form, .form-fields {
     color:azure;
     padding: 0 0 10px 0;
   }
-  .img-width-size, .img-height-size, .preview-text {
+  .img-width-size, .preview-text {
     max-width: 500px;
+  }
+  .img-height-size {
+    width: 500px;
+    height: auto;
   }
   }
   
@@ -290,10 +292,37 @@ form, .form-fields {
       background-color: #2a2a2a;
       color: azure;
       padding: 5px 0 10px 5px;
-      }
-      .btn-home:hover {
-        color: #2a2a2a;
-        background-color: azure;
-      }
+    }
+    .desktop-only:hover {
+      filter: brightness(0.75);
+      border: 2px solid azure;
+    }
+    .desktop-only-wrapper:hover > h5 {
+      visibility: visible;
+    }
+
+    .flex-child:hover {
+      filter: brightness(1.25);
+      border: 2px solid azure;
+      transition: 0.2s;
+    }
+
+    .btn-home:hover {
+      color: #2a2a2a;
+      background-color: azure;
+      transition: 0,5s;
+      padding: 1px 10px 1px 10px;
+      font-size: 18px;
+     }
+
+       .btn-home a:hover {
+         color:#2a2a2a;
+       }
+
+        .btn-home span {
+          display: inline-block;
+          position: relative;
+          transition: 0.5s;
+        }
   }
   

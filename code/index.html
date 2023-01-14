@@ -14,7 +14,7 @@
 
     <header>
         <img class="site-logo" src="C:\Users\josef\Desktop\AlienInvasion\Alien-invasion-site\Icons\AIU_logo.jpg">
-        <h1 class="title">Alien Invasion Updates</h1>
+        <h1 class="title" id="H1">Alien Invasion Updates</h1>
     </header>
     <section class="top-grid">
     <nav class="top-grid-item navbar">
@@ -30,7 +30,7 @@
 </iframe>
 </div>
 <div class="top-grid-item main-news-article">
-  <h3>Alien activity causing extreme weather</h3>
+  <h3>Alien activity causing extreme weather: "Seek immediate shelter"</h3>
     <article class="news-article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pretium 
       diam nec vulputate tempor. Etiam sit amet tincidunt tellus, ut aliquet
       ante. Maecenas sollicitudin fringilla malesuada. Sed sapien ipsum, viverra
@@ -46,15 +46,18 @@
 </div>
 
 <div class="top-grid-item advertisement">
-    <a href="wwww.google.com">
+    <a href="wwww.google.com" target="_blank">
         <p class="ad-text">survival gear store</p>
-        <img class="desktop-only" src="C:\Users\josef\Desktop\AlienInvasion\Alien-invasion-site\Images\vertical_ad.jpeg">
-        <img class="portable-only" src="C:\Users\josef\Desktop\AlienInvasion\Alien-invasion-site\Images\horizontal_ad.jpeg">
+        <div class="desktop-only-wrapper">
+          <h5>Go to store</h5>
+        <img class="desktop-only" alt="advertisement" src="C:\Users\josef\Desktop\AlienInvasion\Alien-invasion-site\Images\vertical_ad.jpeg">
+        </div>
+        <img class="portable-only" alt="advertisement" src="C:\Users\josef\Desktop\AlienInvasion\Alien-invasion-site\Images\horizontal_ad.jpeg">
     </a>
 </div>
 
 <div class="top-grid-item bottom-row">
-  <p>Time since invasion started:</p>
+  <p>Stay tuned, stay safe. AIU brings you global invasion news.</p>
 </div>
 </section>
 
@@ -97,10 +100,10 @@
 </div>
 <div class="flex-child nine">
   <a href="www.google.com" target="_blank">
-    <img class="img-width-size" alt="Street packed with vehicles"
-    src="C:\Users\josef\Desktop\AlienInvasion\Alien-invasion-site\Images\traffic_jam.jpeg">
+    <img class="img-width-size" alt="Circle hovering over rock formation"
+    src="C:\Users\josef\Desktop\AlienInvasion\Alien-invasion-site\Images\halo.jpeg">
     <div class="preview-text">
-      <h4>Traffic chaos as cities are fled</h4>
+      <h4>Sightings linked to disappearances</h4>
       <p>article preview article preview article preview article preview article preview
         article preview article preview article preview article preview article preview 
         article preview article preview article preview article preview</p>
@@ -226,7 +229,7 @@
           </form>
         </section>
 
-  <button class="btn-home">Top of page</button>  
+  <button class="btn-home"><a href="#H1"><span>Top of page</span></a></button> 
 </div>    
 </footer>
 </body>
