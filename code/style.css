@@ -48,7 +48,7 @@ header {
   color: black;
   display: block;
   text-align: left;
-  padding-bottom: 10px;
+  padding: 5px 0 10px 0;
 }
 
 .video-news {
@@ -146,7 +146,7 @@ h3 {
 
 .preview-text {
   position: absolute;
-  top: 78%;
+  top: 77%;
   color: azure;
   background: rgba(0, 0, 0, 0.4);
   width: 100%;
@@ -221,7 +221,10 @@ form, .form-fields {
    .navbar a {
     display: inline-block;
     color:azure;
-    padding: 0 10px 15px 10px;
+    padding: 5px 10px 15px 10px;
+    border: 1px solid azure;
+    border-radius: 4px;
+    margin-bottom: 10px;
    }
    .video-news {
     grid-area: c;
@@ -249,6 +252,7 @@ form, .form-fields {
    .portable-only {
     width: 440px;
    }
+
   }
 
 
@@ -272,7 +276,8 @@ form, .form-fields {
     display: block;
     text-align:center;
     color:azure;
-    padding: 0 0 10px 0;
+    padding: 0 0 15px 0;
+    border: 0;
   }
   .img-width-size, .preview-text {
     max-width: 500px;
@@ -295,7 +300,7 @@ form, .form-fields {
     }
     .desktop-only:hover {
       filter: brightness(0.75);
-      border: 2px solid azure;
+      border: 1px solid azure;
     }
     .desktop-only-wrapper:hover > h5 {
       visibility: visible;
@@ -304,7 +309,7 @@ form, .form-fields {
     .flex-child:hover {
       filter: brightness(1.25);
       border: 2px solid azure;
-      transition: 0.2s;
+      transition: 0.1s;
     }
 
     .btn-home:hover {
@@ -319,10 +324,10 @@ form, .form-fields {
          color:#2a2a2a;
        }
 
-        .btn-home span {
-          display: inline-block;
-          position: relative;
-          transition: 0.5s;
-        }
+      .btn-home span {
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+       }
   }
   
